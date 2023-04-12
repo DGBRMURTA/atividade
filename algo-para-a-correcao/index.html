@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imagem{
+            width: 40px;
+            height: 40px;
+        }
+        .minha_div{
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;        /*alinha no centro na horizontal*/
+            justify-items: center;
+            align-items: center;            /*alinha no centro na vertical*/
+            align-content: center;
+        }
+
+    </style>
+</head>
+<body > 
+    <h3>Clique neste botão</h3>
+
+    <button onclick="MudaCor();">
+        <img src="facebook.png" alt="ícone facebook" class="imagem">
+        <br>
+        <b>texto</b>
+    </button>
+
+    <div class="minha_div" id="minha_div"> 
+        <p>Texto dentro da div</p>
+    </div>
+
+
+    <script>
+        var contador = 0
+        function MudaCor(){
+            contador = contador + 1
+            document.getElementById('minha_div').style.backgroundColor = "blue"
+            document.getElementById('minha_div').style.borderStyle = "solid"
+            document.getElementById('minha_div').style.borderColor = "red"
+            document.getElementById('minha_div').innerHTML = contador 
+        }
+    </script>
+</body>
+</html>
